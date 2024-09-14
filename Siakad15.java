@@ -9,7 +9,7 @@ public class Siakad15 {
     String nama, nim;
     char kelas;
     byte absen;
-    double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
+    double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir, nilaiUTS, nilaiUAS;
 
     // Masukkan input
     System.out.print("Masukkan nama\t: ");
@@ -26,11 +26,14 @@ public class Siakad15 {
     nilaiKuis = sc.nextDouble();
     System.out.print("Masukkan nilai tugas: ");
     nilaiTugas = sc.nextDouble();
-    System.out.print("Masukkan nilai ujian: ");
-    nilaiUjian = sc.nextDouble();
+    System.out.print("Masukkan nilai UTS: ");
+    nilaiUTS = sc.nextDouble();
+    System.out.print("Masukkan nilai UAS: ");
+    nilaiUAS = sc.nextDouble();
 
     // Hitung nilai akhir
-    nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+    // nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+    nilaiAkhir = (nilaiKuis * 0.2) + (nilaiTugas * 0.15) + (nilaiUTS * 0.3) + (nilaiUAS * 0.35);
 
     // Tampilkan output
     System.out.println("Nama: " + nama + " NIM: " + nim);
